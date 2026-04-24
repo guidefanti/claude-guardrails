@@ -1,13 +1,16 @@
 {
   "name": "guidefanti-claude-guardrails",
   "description": "Universal cognitive guardrails for Claude Code",
+  "owner": {
+    "name": "Guilherme Defanti"
+  },
   "plugins": [
     {
       "name": "claude-guardrails",
       "description": "Anti-hallucination, verification protocols, scope discipline, and self-improving project memory.",
       "source": {
-        "source": "local",
-        "path": "./"
+        "source": "github",
+        "repo": "guidefanti/claude-guardrails"
       }
     }
   ]
