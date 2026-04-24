@@ -1,0 +1,14 @@
+{
+  "name": "guidefanti-claude-guardrails",
+  "description": "Universal cognitive guardrails for Claude Code",
+  "plugins": [
+    {
+      "name": "claude-guardrails",
+      "description": "Anti-hallucination, verification protocols, scope discipline, and self-improving project memory.",
+      "source": {
+        "source": "local",
+        "path": "./"
+      }
+    }
+  ]
+}
