@@ -6,20 +6,19 @@ Universal cognitive guardrails for Claude Code. Shield any new project against p
 
 Three skills that make Claude Code more disciplined across any type of project:
 
-1. **`guardrails`** — core cognitive rules (anti-hallucination, verification before "done", clarity before execution, scope discipline). Loaded automatically when relevant.
+1. **guardrails** — core cognitive rules (anti-hallucination, verification before "done", clarity before execution, scope discipline). Loaded automatically when relevant.
 
-2. **`universal-thinking`** — quality protocols for non-code tasks: research, analysis, strategy, marketing, planning. Loaded on demand.
+2. **universal-thinking** — quality protocols for non-code tasks: research, analysis, strategy, marketing, planning. Loaded on demand.
 
-3. **`new-project`** — automatic bootstrap. Generates a guardrailed CLAUDE.md for any new project. Just type `/new-project`.
+3. **new-project** — automatic bootstrap. Generates a guardrailed CLAUDE.md for any new project. Just type `/new-project`.
 
 ## Install
 
-```
-/plugin marketplace add guidefanti/claude-guardrails
-/plugin install claude-guardrails
-```
+One line:
 
-That's it. All three skills are now available.
+```bash
+git clone https://github.com/guidefanti/claude-guardrails.git /tmp/cg && cp -r /tmp/cg/skills/* ~/.claude/skills/ && rm -rf /tmp/cg
+```
 
 ## Usage
 
@@ -55,15 +54,13 @@ Claude analyzes the existing CLAUDE.md and suggests only additions, never remove
 
 ### Daily workflow
 
-Work normally. Cognitive rules are active. When you correct a Claude mistake, it automatically logs the pattern in the project's "Known failures" section.
+Work normally. Cognitive rules are active. When you correct a Claude mistake, it automatically logs the pattern in the project Known failures section.
 
 ## Structure
 
 ```
 claude-guardrails/
-├── .claude-plugin/
-│   └── plugin.json                     # Plugin manifest
-├── CLAUDE.md                           # Global rules (for optional manual install)
+├── CLAUDE.md                           # Global rules (optional manual install)
 ├── skills/
 │   ├── guardrails/
 │   │   └── SKILL.md                    # Core cognitive guardrails
@@ -78,18 +75,11 @@ claude-guardrails/
 
 These are NOT bundled but pair well with this framework:
 
-| Resource | What it does | Install |
-|---|---|---|
-| [Karpathy Guidelines](https://github.com/forrestchang/andrej-karpathy-skills) | Behavioral rules for LLM coding mistakes (81k stars) | `claude plugin install forrestchang/andrej-karpathy-skills` |
-| [LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) | Build persistent knowledge bases with LLMs | Copy gist to your LLM agent |
-| [UltraPlan](https://github.com/6missedcalls/ultraplan) | Deep multi-phase planning before implementation | `cp -r ultraplan ~/.claude/skills/` |
-
-## Compatibility
-
-- Works with any existing skills, hooks, or plugins
-- Does not conflict with project-level CLAUDE.md files
-- Does not conflict with Claude Code's auto-memory
-- Tested with Claude Code v2.1+
+| Resource | What it does |
+|---|---|
+| [Karpathy Guidelines](https://github.com/forrestchang/andrej-karpathy-skills) | Behavioral rules for LLM coding mistakes (81k stars) |
+| [LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) | Build persistent knowledge bases with LLMs |
+| [UltraPlan](https://github.com/6missedcalls/ultraplan) | Deep multi-phase planning before implementation |
 
 ## Philosophy
 
@@ -101,7 +91,7 @@ These are NOT bundled but pair well with this framework:
 ## Language
 
 All files are in English for maximum LLM adherence and global shareability.
-To get responses in your preferred language, add a language instruction to your project's CLAUDE.md or `~/.claude/CLAUDE.local.md`.
+To get responses in your preferred language, add a language instruction to your project CLAUDE.md or `~/.claude/CLAUDE.local.md`.
 
 ## License
 

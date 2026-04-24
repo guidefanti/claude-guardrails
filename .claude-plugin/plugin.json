@@ -1,9 +1,0 @@
-{
-  "name": "claude-guardrails",
-  "version": "1.0.0",
-  "description": "Universal cognitive guardrails for Claude Code. Anti-hallucination, verification protocols, scope discipline, and self-improving project memory.",
-  "author": "Guilherme Defanti",
-  "repository": "https://github.com/guidefanti/claude-guardrails",
-  "license": "MIT",
-  "keywords": ["guardrails", "quality", "anti-hallucination", "verification", "universal", "thinking", "planning"]
-}
