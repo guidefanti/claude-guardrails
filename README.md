@@ -15,16 +15,11 @@ Three skills that make Claude Code more disciplined across any type of project:
 ## Install
 
 ```
-/plugin install guidefanti/claude-guardrails
+/plugin marketplace add guidefanti/claude-guardrails
+/plugin install claude-guardrails
 ```
 
 That's it. All three skills are now available.
-
-For maximum coverage, you can also append the core rules to your global CLAUDE.md so they load in every session (not just when Claude decides to invoke the skill):
-
-```bash
-cat ~/.claude/plugins/guidefanti-claude-guardrails/CLAUDE.md >> ~/.claude/CLAUDE.md
-```
 
 ## Usage
 
